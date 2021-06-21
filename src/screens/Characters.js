@@ -31,7 +31,16 @@ const Characters = () => {
     } = character;
     console.log(character);
     return (
-      <View key={id}>
+      <View
+        style={{
+          borderWidth: 2,
+          borderColor: '#dbdbdb',
+          borderRadius: 25,
+          padding: 20,
+          marginBottom: 10,
+          alignItems: 'center',
+        }}
+        key={id}>
         <Image source={{uri: image}} style={{width: 200, height: 200}} />
         <Text>{name}</Text>
         <Text>{locationName}</Text>
@@ -44,6 +53,7 @@ const Characters = () => {
         <Text>loading...</Text>
       ) : (
         <FlatList
+          contentContainerStyle={{padding: 20}}
           data={data?.characters?.results ?? []}
           renderItem={({item}) => <Item {...item} />}
         />
