@@ -1,0 +1,39 @@
+
+import React from 'react';
+import {View, Text, Image, FlatList, SafeAreaView} from 'react-native';
+
+const Characters = () => {
+  const data = [
+    {
+      id: '1',
+      name: 'Rick Sanchez',
+      image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+      location: {
+        name: 'Earth (Replacement Dimension)',
+      },
+    },
+  ];
+  const Item = character => {
+    const {
+      id,
+      name,
+      image,
+      location: {name: locationName},
+    } = character;
+    console.log(character);
+    return (
+      <View key={id}>
+        <Image source={{uri: image}} style={{width: 200, height: 200}} />
+        <Text>{name}</Text>
+        <Text>{locationName}</Text>
+      </View>
+    );
+  };
+  return (
+    <SafeAreaView>
+      <FlatList data={data} renderItem={({item}) => <Item {...item} />} />
+    </SafeAreaView>
+  );
+};
+
+export default Characters;
