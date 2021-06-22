@@ -3,11 +3,11 @@ https://reactnative.dev/docs/environment-setup
 follow CLI instructions
 
 other pre-requisits:
-node
-yarn `npm install -g yarn`
-xcode (if on mac)
-android studio (for either platform)
-text editor - i recommend VSCode if you don't already have a preference
+- node
+- yarn `npm install -g yarn`
+- xcode (if on mac)
+- android studio (for either platform)
+- text editor - i recommend VSCode if you don't already have a preference
 
 this is the query we're using on the Rick & Morty graphql api
 https://rickandmortyapi.com/graphql
